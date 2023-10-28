@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack Game</title>
+  <script src="./main.js" defer></script>
 </head>
+
 <body>
   <main class="main">
-    <form action="#" class="blackjack">
+    <section class="blackjack">
       <h1 class="title">blackjack</h1>
-      <h2 class="subtitle">Want to play a round?</h2>
-      <p class="para" id="data-user">Welcome!</p>
-      <p class="para" id="cards-el ">Cards: </p>
-      <p class="para" id="sum-el">Sum: </p>
-      <div class="btns">
-        <button class="btn">start game</button>
-        <button class="btn">new card</button>
-        <button class="btn">new game</button>
-      </div>
-    </form>
+      <form action="#" class="blackjack-form" id="blackjack-form-el">
+        <h2 class="subtitle" id="message-el">Want to play a round?</h2>
+        <p class="para" id="cards-el">Cards:</p>
+        <p class="para" id="sum-el">Sum:</p>
+        <div class="btns">
+          <button class="btn" onclick="startGame()">start game</button>
+          <button class="btn" onclick="newCard()">new card</button>
+        </div>
+        <p class="para" id="user-el"></p>
+      </form>
+    </section>
   </main>
   <footer class="footer">
-    <small class="attr">From the <span class="accent">"Learn JavaScript"</span> course by <a href="#" class="attr-link" target="_blank" rel="noreferrer">Scrimba</a> - Coded by <a href="#" class="attr-link" target="_blank" rel="noreferrer">vimp</a></small>
+    <small class="attr">From the <span class="accent">"Learn JavaScript"</span> course by <a
+        href="https://scrimba.com/learn/learnjavascript" class="attr-link" target="_blank" rel="noreferrer">Scrimba</a>
+      - Coded by <a href="https://github.com/mendez-v/blackjack-game" class="attr-link" target="_blank"
+        rel="noreferrer">vimp</a></small>
   </footer>
 </body>
+
 </html>
