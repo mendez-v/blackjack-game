@@ -31,6 +31,8 @@ confirmBtn.addEventListener("click", (evt) => {
   userData.close()
   newGameBtn.setAttribute("disabled", "")
   startBtn.removeAttribute("disabled")
+
+  startBtn.focus()
 })
 
 function getRandomCard() {
@@ -51,19 +53,21 @@ function render() {
   }
   sumEl.textContent = `Sum: ${sum}`
   if (sum <= 20) {
-    messageEl.textContent = `Do you want to draw a new card?`
+    messageEl.textContent = `Do you want to draw a new card? 🤔`
   } else if (sum === 21) {
-    messageEl.textContent = `You've got Blackjack!!`
+    messageEl.textContent = `You've got Blackjack!! 🎉`
     hasBlackjack = true
     startBtn.setAttribute("disabled", "")
     newBtn.setAttribute("disabled", "")
     newGameBtn.removeAttribute("disabled")
+    newGameBtn.focus()
   } else {
-    messageEl.textContent = `You're out of the game`
+    messageEl.textContent = `You're out of the game 😭`
     isAlive = false
     newBtn.setAttribute("disabled", "")
     startBtn.setAttribute("disabled", "")
     newGameBtn.removeAttribute("disabled")
+    newGameBtn.focus()
   }
 }
 
@@ -87,6 +91,7 @@ function startGame() {
   render()
   newBtn.removeAttribute("disabled")
   startBtn.setAttribute("disabled", "")
+  newBtn.focus()
 }
 
 function newCard() {

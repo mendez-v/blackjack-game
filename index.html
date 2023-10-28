@@ -5,39 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack Game</title>
+  <link rel="icon" href="./assets/img/fav.svg">
+  <link rel="apple-touch-icon" href="./assets/img/fav.svg" type="image/svg">
+  <link rel="stylesheet" href="./styles.css">
   <script src="./main.js" defer></script>
 </head>
 
 <body>
   <main class="main">
     <section class="blackjack">
-      <dialog id="user-data">
-        <form action="#" autocomplete="off">
+      <dialog class="dialog" id="user-data">
+        <form class="dialog-form" action="#" autocomplete="off">
           <div class="inner-wrapper">
             <label for="user-name">What is your name?</label>
-            <input type="text" id="user-name" required>
+            <input class="dialog-input" type="text" id="user-name">
           </div>
           <div class="inner-wrapper">
             <label for="user-bet">How much is you bet?</label>
-            <input type="text" id="user-bet" required>
+            <input class="dialog-input" type="number" id="user-bet">
           </div>
           <div class="btn-wrapper">
-            <button id="confirm-btn"">confirm</button>
-            <button formmethod="dialog">cancel</button>
+            <button class="modal-btn" id="confirm-btn"">confirm</button>
+            <button class="modal-btn" formmethod="dialog">cancel</button>
           </div>
         </form>
       </dialog>
       <h1 class="title">blackjack</h1>
       <form action="#" class="blackjack-form" id="blackjack-form-el">
-        <button id="new-game-btn" onclick="newGame()">new game</button>
-        <h2 class="subtitle" id="message-el">Want to play a round?</h2>
+        <button class="btn" id="new-game-btn" onclick="newGame()" autofocus>new game</button>
+        <h2 class="subtitle" id="message-el">Want to play a round? 😎</h2>
         <p class="para" id="cards-el">Cards:</p>
         <p class="para" id="sum-el">Sum:</p>
         <div class="btn-wrapper">
           <button class="btn" id="start-btn" onclick="startGame()" disabled>start game</button>
           <button class="btn" id="new-btn" onclick="newCard()" disabled>new card</button>
         </div>
-        <p class="para" id="user-el">User: $</p>
+        <h3 class="para--user" id="user-el">User: $</h3>
       </form>
     </section>
   </main>
@@ -45,7 +48,7 @@
     <small class="attr">From the <span class="accent">"Learn JavaScript"</span> course by <a
         href="https://scrimba.com/learn/learnjavascript" class="attr-link" target="_blank" rel="noreferrer">Scrimba</a>
       - Coded by <a href="https://github.com/mendez-v/blackjack-game" class="attr-link" target="_blank"
-        rel="noreferrer">vimp</a></small>
+        rel="noreferrer">vimp</a> 😎</small>
   </footer>
 </body>
 
