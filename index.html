@@ -11,32 +11,33 @@
 <body>
   <main class="main">
     <section class="blackjack">
-      <dialog id="user-bet">
-        <form action="#">
+      <dialog id="user-data">
+        <form action="#" autocomplete="off">
           <div class="inner-wrapper">
             <label for="user-name">What is your name?</label>
-            <input type="text" id="user-name">
+            <input type="text" id="user-name" required>
           </div>
           <div class="inner-wrapper">
             <label for="user-bet">How much is you bet?</label>
-            <input type="text" id="user-bet">
+            <input type="text" id="user-bet" required>
           </div>
           <div class="btn-wrapper">
-            <button onclick="confirmBtn()">confirm</button>
+            <button id="confirm-btn"">confirm</button>
             <button formmethod="dialog">cancel</button>
           </div>
         </form>
       </dialog>
       <h1 class="title">blackjack</h1>
       <form action="#" class="blackjack-form" id="blackjack-form-el">
+        <button id="new-game-btn" onclick="newGame()">new game</button>
         <h2 class="subtitle" id="message-el">Want to play a round?</h2>
         <p class="para" id="cards-el">Cards:</p>
         <p class="para" id="sum-el">Sum:</p>
         <div class="btn-wrapper">
-          <button class="btn" onclick="startGame()">start game</button>
-          <button class="btn" onclick="newCard()">new card</button>
+          <button class="btn" id="start-btn" onclick="startGame()" disabled>start game</button>
+          <button class="btn" id="new-btn" onclick="newCard()" disabled>new card</button>
         </div>
-        <p class="para" id="user-el"></p>
+        <p class="para" id="user-el">User: $</p>
       </form>
     </section>
   </main>
