@@ -11,12 +11,28 @@
 <body>
   <main class="main">
     <section class="blackjack">
+      <dialog id="user-bet">
+        <form action="#">
+          <div class="inner-wrapper">
+            <label for="user-name">What is your name?</label>
+            <input type="text" id="user-name">
+          </div>
+          <div class="inner-wrapper">
+            <label for="user-bet">How much is you bet?</label>
+            <input type="text" id="user-bet">
+          </div>
+          <div class="btn-wrapper">
+            <button onclick="confirmBtn()">confirm</button>
+            <button formmethod="dialog">cancel</button>
+          </div>
+        </form>
+      </dialog>
       <h1 class="title">blackjack</h1>
       <form action="#" class="blackjack-form" id="blackjack-form-el">
         <h2 class="subtitle" id="message-el">Want to play a round?</h2>
         <p class="para" id="cards-el">Cards:</p>
         <p class="para" id="sum-el">Sum:</p>
-        <div class="btns">
+        <div class="btn-wrapper">
           <button class="btn" onclick="startGame()">start game</button>
           <button class="btn" onclick="newCard()">new card</button>
         </div>
